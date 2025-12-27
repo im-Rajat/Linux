@@ -1,14 +1,24 @@
 # Linux Commands
 
-- Create a shorcut:
-    - `ln -s /path/to/target ~/shortcut_name`
+## File Operations
+
+- Create a symbolic link (shorcut): `ln -s /path/to/target ~/shortcut_name`
+- Change file or directory permissions:
+    - Make a file executable: `chmod +x <file_name>`
+    - Set full permissions (read/write/execute for everyone - use with caution): `chmod 777 <file_name>`
+
+---
+
+## System & Binaries
+
+- Check shared library dependencies of a program: `ldd <file_name>`
+
+---
+
+## Process Management
 
 - Kill a process:
-    - `kill -9 <PID>`
-
-- To check all shared library dependencies of a program:
-    - `ldd <file_name>` 
-
-- To change the permissions of a file or directory:
-    - `chmod +x <file_name>`
-    - `chmod 777 <filename>`
+    - Force kill (sends `SIGKILL`, process cannot clean up): `kill -9 <PID>`
+- Send a specific signal (e.g., Signal 10/SIGUSR1): `kill -s 10 <PID>`
+- List all available signal types: `kill -l`
+- View manual for the kill command: `man kill`
