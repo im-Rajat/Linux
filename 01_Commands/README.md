@@ -19,6 +19,7 @@
 
 - Kill a process:
     - Force kill (sends `SIGKILL`, process cannot clean up): `kill -9 <PID>`
-- Send a specific signal (e.g., Signal 10/SIGUSR1): `kill -s 10 <PID>`
+- Send a specific signal (e.g., Signal 10/SIGUSR1): `kill -s 10 <PID>` or `kill -SIGUSR1 <PID>` or `kill -USR1 <PID>`
 - List all available signal types: `kill -l`
+
 - View manual for the kill command: `man kill`
