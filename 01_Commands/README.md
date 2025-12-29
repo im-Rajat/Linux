@@ -17,6 +17,11 @@
 
 ## Process Management
 
+- List all running processes:
+    - Resource focused (BSD style): `ps aux`
+        - *(Best for checking %CPU, %MEM, and memory usage)*
+    - Hierarchy focused (System V style): `ps -ef`
+        - *(Best for seeing PPID/Parent-Child relationships)*
 - Kill a process:
     - Force kill (sends `SIGKILL`, process cannot clean up): `kill -9 <PID>`
 - Send a specific signal (e.g., Signal 10/SIGUSR1): `kill -s 10 <PID>` or `kill -SIGUSR1 <PID>` or `kill -USR1 <PID>`
